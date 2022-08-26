@@ -7,6 +7,41 @@
 */
 
 
+void Func(int n){
+    int first = n / 10000;       //Находим первую цифру в ведённом числе
+        Console.WriteLine("Первое число - " + first);
+    
+    int secondtmp = n / 1000;
+    int second = secondtmp % 10;  //Находим вторую цифру в ведённом числе
+        Console.WriteLine("Второе число - " + second);
+
+    int forthtmp = n / 10;
+    int forth = forthtmp % 10;    //Находим третью цифру в ведённом числе
+        Console.WriteLine("Четвертое число - " + forth);
+     
+    int fifth = n % 10;           //Находим четвертую цифру в ведённом числе
+    Console.WriteLine("Пятое число - " + fifth);
+    
+
+    
+    if (first == fifth && second == forth){   // Сравниваем (первое и пятое) число &&  (второе и четвёртое) число.
+        Console.Write("Введённое число ЯВЛЯЕТСЯ ПАЛИНДРОМОМ! - " + n);
+    }
+    else{
+        Console.Write("Введённое число НЕ является палиндромом!");
+    }
+}
+
+Console.WriteLine("Введите пятизначное число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+if(num > 9999 && num < 100000){    //  Проверяем чтобы введеное число было пятизначным...
+    Func(num);
+}
+else{
+    Console.WriteLine("Введённое число НЕ пятизначное и не подходит по условию задачи!");
+}
+
 
 
 
@@ -32,7 +67,7 @@ A (7,-5, 0); B (1,-1,9) -> 11.53 */
 5 -> 1, 8, 27, 64, 125 */
 
 
-void Func(int n){
+/* void Func(int n){
     int count = 1;
     while (count <= n ) {
         Console.Write(count*count*count + ", ");
@@ -44,7 +79,7 @@ Console.WriteLine("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 if (num <= 0) Console.WriteLine("Не корректное число!");
 Func(num);
-
+ */
 
 
 
