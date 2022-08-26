@@ -32,6 +32,23 @@ A (7,-5, 0); B (1,-1,9) -> 11.53 */
 5 -> 1, 8, 27, 64, 125 */
 
 
+void Func(int n){
+    int count = 1;
+    while (count <= n ) {
+        Console.Write(count*count*count + ", ");
+        count++;
+    }
+}
+
+Console.WriteLine("Введите число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+if (num <= 0) Console.WriteLine("Не корректное число!");
+Func(num);
+
+
+
+
+
 
 
 
