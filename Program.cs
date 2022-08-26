@@ -52,6 +52,32 @@ else{
 A (3,6,8); B (2,1,-7), -> 15.84
 A (7,-5, 0); B (1,-1,9) -> 11.53 */
 
+ //d = √((хА –  хВ)2 + (уА – уВ)2 + (zА – zВ)2)
+
+double d;   // Искомое расстояние между точками
+
+// вводим координаты вдух точек по трем координатам x, y ,z
+Console.WriteLine("Введите координату Х точки А: ");  
+double xA = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите координату Y точки А: ");
+double yA = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите координату Z точки А: ");
+double zA = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите координату Х точки B: ");
+double xB = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите координату Y точки B: ");
+double yB = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите координату Z точки B: ");
+double zB = Convert.ToDouble(Console.ReadLine());
+ 
+ // Вычисляем по формуле расстояние, расчет и вывод на экран производим в самой функции
+void Function(double xA, double yA, double zA, double xB, double yB, double zB){
+            d = Math.Sqrt(((xA-xB)*(xA-xB)) + ((yA-yB)*(yA-yB)) + ((zA-zB)*(zA-zB)));
+    Console.WriteLine("Расстояние между точками A("+ xA +" , "+ yA +" , "+ zA +") и B("+ xB +" , "+ yB +" , "+ zB+") = "+ d);
+}
+// Вызываем функцию (метод) для ее испорлнения
+Function(xA, yA, zA, xB, yB, zB);
+ 
 
 
 
