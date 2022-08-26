@@ -116,4 +116,34 @@ Func(num);
 
 
 
+// Дополнительная задача с семинара... 
+
+// Напишите программу, которая принимает на вход координаты двух точек 
+//и находит расстояние между ними в 2D пространстве
+//d = √((хА –  хВ)2 + (уА – уВ)2)
+ 
+double d;   // Искомое расстояние между точками
+
+// вводим координаты вдух точек по двум координатам x, y
+Console.WriteLine("Введите координату Х точки А: ");  
+double xA = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите координату Y точки А: ");
+double yA = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите координату Х точки B: ");
+double xB = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите координату Y точки B: ");
+double yB = Convert.ToDouble(Console.ReadLine());
+
+ 
+ // Вычисляем по формуле расстояние, расчет и вывод на экран производим в самой функции
+void Function(double xA, double yA, double xB, double yB){
+            d = Math.Sqrt(((xA-xB)*(xA-xB)) + ((yA-yB)*(yA-yB)));
+    Console.WriteLine("Расстояние между точками A("+ xA +" , "+ yA +") и B("+ xB +" , "+ yB +") = "+ d + 
+    " или округлив = " + string.Format("{0:N2}", d)); // тут округлил еще до 2х знаков после запятой
+}
+// Вызываем функцию (метод) для ее испорлнения
+Function(xA, yA, xB, yB);
+
+
+
 
